@@ -9,7 +9,7 @@ namespace WebApplicationMVC.Models
     public class Produto
     {
         public int Id { get; set; }        
-        [Range(1,10, ErrorMessage ="Valor fora da faixa")]
+        [Range(1,10, ErrorMessage ="Valor fora da faixa")] //define min e máx do input
         public int Quantidade { get; set; }
         public int CategoriaId { get; set; }
         [Display(Name = "Descrição")]
