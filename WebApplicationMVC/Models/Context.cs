@@ -16,5 +16,10 @@ namespace WebApplicationMVC.Models
             //define qual BD será usado
             optionsBuilder.UseSqlServer(@"Server=(localdb)\mssqllocaldb;Database=Cursomvc;Integrated Security=true");
         }
+
+        public virtual void SetModified(Object entity)
+        {
+            Entry(entity).State = EntityState.Modified;            
+        }
     }
 }
